@@ -1,0 +1,12 @@
+liste = []
+def Ekok(sayi1,sayi2):
+    ekok = sayi1*sayi2
+    for i in range(ekok,1,-1):
+        if i % sayi1 ==0 and i % sayi2 ==0:
+            liste.append(i)
+
+    return min(liste)
+
+a = int(input("İlk değeri giriniz : "))
+b = int(input("İkinci değeri giriniz : "))
+print(Ekok(a,b))
