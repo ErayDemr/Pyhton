@@ -1,0 +1,30 @@
+from random import randint
+
+oyundevam = True
+
+while oyundevam:
+    rastgeleSAyi = randint(1,100)
+    hak = 7
+    while True:
+        if hak > 0:
+            tahmin = int(input("Bir Tahmin Değeri Giriniz(1-100) : "))
+        else:
+            break
+
+        if tahmin != rastgeleSAyi:
+            hak -= 1
+            if tahmin > rastgeleSAyi:
+                print("Sayi Aşağıda! Tekrar Deneyiniz... \n Kalan Hakkınız : {}".format(hak))
+
+            else:
+                print("Sayı Yukarıda! Tekrardan Deneyiniz...\n Kalan Hakkınız : {}".format(hak))
+
+        else:
+            print("Tebrikler Sayıyı Buldunuz :D")
+            break
+    kontrol = input("Oyuna Devam etmek istiyormusunuz ( Evet için : E ve Hayır için : H 'ye basınız.) = ")
+    if kontrol =="E" :
+        oyundevam = True
+    else:
+        oyundevam = False
+        break
